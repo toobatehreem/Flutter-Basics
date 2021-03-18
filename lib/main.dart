@@ -136,6 +136,7 @@ class _MyAppState extends State<MyApp> {
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Settings'),
+              trailing: Icon(Icons.edit),
               onTap: () {},
             ),
             ListTile(
