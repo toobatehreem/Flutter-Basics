@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/utils/constants.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -51,7 +52,10 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             subtitle: Text('toobatehreemsheikh@gmail.com'),
-            onTap: () {},
+            onTap: () {
+              Constants.prefs.setBool('LoggedIn', false);
+              Navigator.pushReplacementNamed(context, '/login');
+            },
           )
         ],
       ),
